@@ -28,7 +28,7 @@ public class HdfsUtil {
     @Before
     public void init() throws Exception{
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://192.168.146.4/:9000");
+        conf.set("fs.defaultFS", "hdfs://192.168.146.4:9000");
         fs = FileSystem.get(new URI("hdfs://192.168.146.4:9000/"),conf,"root");
 
 
@@ -146,9 +146,9 @@ public class HdfsUtil {
     public static void main(String[] args) throws Exception {
 
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://server201:9000/");
+        conf.set("fs.defaultFS", "hdfs://192.168.146.4:9000/");
 
-        FileSystem fs = FileSystem.get(new URI("hdfs://server201:9000/"),conf,"root");
+        FileSystem fs = FileSystem.get(new URI("hdfs://192.168.146.4:9000/"),conf,"root");
 
 
         FSDataOutputStream fsDataOutputStream = fs.create(new Path("/demo.ktr"));
