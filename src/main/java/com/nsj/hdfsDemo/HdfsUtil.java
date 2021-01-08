@@ -147,6 +147,7 @@ public class HdfsUtil {
 
         Configuration conf = new Configuration();
         conf.set("fs.defaultFS", "hdfs://192.168.146.4:9000/");
+        //11
 
         FileSystem fs = FileSystem.get(new URI("hdfs://192.168.146.4:9000/"),conf,"root");
 
