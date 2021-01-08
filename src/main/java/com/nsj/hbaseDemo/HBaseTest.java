@@ -343,7 +343,7 @@ public class HBaseTest {
 //      queryByCondition("t2", "f1","time_long", "1501213528573");
 
 
- //               --------------多条件查询----------------------
+ //     --          --------------多条件查询----------------------
 //      queryByConditions("t2", new String[]{"f1"},new String[]{"time_long","time_str"}, new String[]{"1501213528573","2017-07-28 11:45:28 573"});
 //                --------------删除记录-----------------------
 //      deleteRow("t2", "row-0001");
