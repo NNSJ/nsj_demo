@@ -250,7 +250,7 @@ public class HdfsPutAndDown {
 // SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
 //System.out.println(df.format(new Date()));// new Date()为获取当前系统时间
             /*批量上传文件到大数据平台
-             **
+             **t
              */
 // mkdir("/data");
 //uploadFileToHDFS("D:\\data\\浅剖", "/data");
