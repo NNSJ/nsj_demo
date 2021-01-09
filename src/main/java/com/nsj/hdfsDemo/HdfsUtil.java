@@ -42,7 +42,7 @@ public class HdfsUtil {
     @Test
     public void testUpload() throws IllegalArgumentException, IOException{
 
-        fs.copyFromLocalFile(new Path("c:/a.txt"), new Path("/demo.ktr"));
+        fs.copyFromLocalFile(new Path("c:/a.txt"), new Path("/dem2o.ktr"));
 
     }
 
