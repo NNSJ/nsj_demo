@@ -48,8 +48,8 @@ public class HBaseTest {
     static Connection connection = null;
     static {
         configuration = HBaseConfiguration.create();
-        configuration.set("hbase.master", ",192.168.59.18:60000");
-        configuration.set("hbase.zookeeper.quorum", "192.168.59.18");
+        configuration.set("hbase.master", "192.168.146.4:60000");
+        configuration.set("hbase.zookeeper.quorum", "192.168.146.4");
         configuration.set("hbase.zookeeper.property.clientPort", "2181");
 
         try {
@@ -68,8 +68,8 @@ public class HBaseTest {
             Admin admin = connection.getAdmin();
             TableName tableName = TableName.valueOf(tableStr);
             if (admin.tableExists(tableName)) {// 如果存在要创建的表，那么先删除，再创建
-                //admin.disableTable(tableName);
-                //admin.deleteTable(tableName);
+//                admin.disableTable(tableName);
+//                admin.deleteTable(tableName);
                 System.out.println(tableName + " is exist,detele....");
                 return;
             }
@@ -313,28 +313,28 @@ public class HBaseTest {
 
 //----------------创建表---------------------
 
-//      createTable("t2", new String[]{"f1"});
+      createTable("t3", new String[]{"f1"});
 
 
 //----------------添加数据 -------------------
 
-        for(int i=0;i<10;i++){
-            long currentId=new Date().getTime();
-            DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-
-
-            byte [] rowkey = Bytes.add(MD5Hash.getMD5AsHex(Bytes.toBytes(currentId)).substring(0, 3).getBytes(),
-                    Bytes.toBytes(String.valueOf(currentId)));
-            //System.out.println(rowkey.length);
-
-            insertData("t2", rowkey, "f1","time_str", format.format(currentId));
-            insertData("t2", rowkey, "f1","time_long",String.valueOf(currentId));
-        }
+//        for(int i=0;i<10;i++){
+//            long currentId=new Date().getTime();
+//            DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
+//
+//
+//            byte [] rowkey = Bytes.add(MD5Hash.getMD5AsHex(Bytes.toBytes(currentId)).substring(0, 3).getBytes(),
+//                    Bytes.toBytes(String.valueOf(currentId)));
+//            //System.out.println(rowkey.length);
+//
+//            insertData("t2", rowkey, "f1","time_str", format.format(currentId));
+//            insertData("t2", rowkey, "f1","time_long",String.valueOf(currentId));
+//        }
 
 
 //---------------查询全部数据 ------------------
 
-        queryAll("t2");
+  //      queryAll("t2");
 //        --------------根据rowid查询数据 --------------
 //      queryByRowId("t2", "bdc1501213528573");
 
@@ -350,7 +350,7 @@ public class HBaseTest {
 //                --------------删除表------------------------
 //      dropTable("t2");
 
-        testRowFilter("t2");
+  //     testRowFilter("t2");
 
     }
 }
