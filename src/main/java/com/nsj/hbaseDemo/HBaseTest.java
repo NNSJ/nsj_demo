@@ -313,7 +313,7 @@ public class HBaseTest {
 
 //----------------创建表---------------------
 
-      createTable("t3", new String[]{"f1"});
+//      createTable("t4", new String[]{"f1"});
 
 
 //----------------添加数据 -------------------
@@ -334,7 +334,7 @@ public class HBaseTest {
 
 //---------------查询全部数据 ------------------
 
-  //      queryAll("t2");
+        queryAll("t2");
 //        --------------根据rowid查询数据 --------------
 //      queryByRowId("t2", "bdc1501213528573");
 
