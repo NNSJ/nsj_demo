@@ -318,23 +318,23 @@ public class HBaseTest {
 
 //----------------添加数据 -------------------
 
-//        for(int i=0;i<10;i++){
-//            long currentId=new Date().getTime();
-//            DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-//
-//
-//            byte [] rowkey = Bytes.add(MD5Hash.getMD5AsHex(Bytes.toBytes(currentId)).substring(0, 3).getBytes(),
-//                    Bytes.toBytes(String.valueOf(currentId)));
-//            //System.out.println(rowkey.length);
-//
-//            insertData("t2", rowkey, "f1","time_str", format.format(currentId));
-//            insertData("t2", rowkey, "f1","time_long",String.valueOf(currentId));
-//        }
+        for(int i=0;i<10;i++){
+            long currentId=new Date().getTime();
+            DateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
+
+
+            byte [] rowkey = Bytes.add(MD5Hash.getMD5AsHex(Bytes.toBytes(currentId)).substring(0, 3).getBytes(),
+                    Bytes.toBytes(String.valueOf(currentId)));
+            //System.out.println(rowkey.length);
+
+         insertData("t2", rowkey, "f1","time_str", format.format(currentId));
+            insertData("t2", rowkey, "f1","time_long",String.valueOf(currentId));
+        }
 
 
 //---------------查询全部数据 ------------------
 
-        queryAll("t2");
+        queryAll("test");
 //        --------------根据rowid查询数据 --------------
 //      queryByRowId("t2", "bdc1501213528573");
 

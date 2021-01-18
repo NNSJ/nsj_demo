@@ -32,10 +32,10 @@ public class HdfsPutAndDown {
     static{
 //指定hadoop fs的地址
 //conf.set("fs.default.name", "hdfs://172.16.1.198:9000");
-        conf.addResource(HdfsPutAndDown.class.getClassLoader().getResource("core-site.xml"));
-        System.out.println(conf.get("ha.zookeeper.quorum"));
+//        conf.addResource(HdfsPutAndDown.class.getClassLoader().getResource("core-site.xml"));
+ //       System.out.println(conf.get("ha.zookeeper.quorum"));
 //conf.addResource(HdfsPutAndDown.class.getClassLoader().getResource("yarn-site.xml"));
-        conf.addResource(HdfsPutAndDown.class.getClassLoader().getResource("hdfs-site.xml"));
+ //       conf.addResource(HdfsPutAndDown.class.getClassLoader().getResource("hdfs-site.xml"));
     }
 
     public static FileSystem getFileSystem() throws IOException {
@@ -253,11 +253,11 @@ public class HdfsPutAndDown {
              **t
              */
 // mkdir("/data");
-//uploadFileToHDFS("D:\\data\\浅剖", "/data");
+uploadFileToHDFS("C:\\a.txt", "/data");
 //下载
-            String destPath = "D:\\download";
-            String srcFile = "/data/浅剖/XTL06";
-            getFile(srcFile,destPath);
+   //         String destPath = "D:\\download";
+    //        String srcFile = "/data/浅剖/XTL06";
+     //       getFile(srcFile,destPath);
 /* String destPath = "/home";
 String List_path = "/data/multi-demp/XL01";
 ArrayList<String> files = ListFile1(List_path);
