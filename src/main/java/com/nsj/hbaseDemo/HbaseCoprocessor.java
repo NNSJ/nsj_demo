@@ -36,4 +36,8 @@ public class HbaseCoprocessor extends BaseRegionObserver {
         table.close();
     }
 
+
+    public static void main(String[] args) {
+        System.out.println("二级索引");
+    }
 }
