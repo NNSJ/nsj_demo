@@ -32,6 +32,7 @@ public class HdfsUtil {
         fs = FileSystem.get(new URI("hdfs://192.168.146.4:8020/"),conf,"root");
 
 
+
     }
 
     /**
@@ -43,6 +44,7 @@ public class HdfsUtil {
     public void testUpload() throws IllegalArgumentException, IOException{
 
         fs.copyFromLocalFile(new Path("c:/a.txt"), new Path("/dem2o.ktr"));
+        fs.create(new Path("/A"));
 
     }
 
